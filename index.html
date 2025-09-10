@@ -27,10 +27,28 @@
         </div>
 
         <h3>Prácticas:</h3>
-        <ul>
-            <li><a href="Bibliografia/bibiolgrafia.html" target="_blank">Práctica Número One (Viernes 05-Sep-2025) - Bibliografía</a></li>
-            <li><a href="MotoresDeBusqueda/motoresbusqueda.html" target="_blank">Práctica Número Two (Miércoles 10-Sep-2025) - Motores De Búsqueda</a></li>
-        </ul>
+        <div class="links">
+            <a href="Bibliografia/bibiolgrafia.html" class="button" target="_blank">
+                Práctica Número One (Viernes 05-Sep-2025) - Bibliografía
+            </a>
+            <a href="MotoresDeBusqueda/motoresbusqueda.html" class="button" target="_blank">
+                Práctica Número Two (Miércoles 10-Sep-2025) - Motores De Búsqueda
+            </a>
+        </div>
     </div>
+
+    <style>
+        /* Ajuste para que los links queden en vertical */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Espacio entre los botones */
+            margin-top: 15px;
+        }
+        .links .button {
+            display: block;
+            text-align: center;
+        }
+    </style>
 </body>
 </html>
