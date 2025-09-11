@@ -17,44 +17,40 @@ header {
     position: relative;
     z-index: 2;
     background-color: #294025;
-    padding: 30px 20px;
+    padding: 20px 10px;
     margin-bottom: 10px;
 }
 
-/* Contenedor del header: imágenes + texto */
 .header-content {
     display: flex;
-    align-items: center;       /* Centra verticalmente */
-    justify-content: center;   /* Centra horizontalmente */
-    gap: 300px;                 /* Espacio entre texto y fotos */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Para móvil */
+    gap: 20px;       /* Más flexible */
 }
 
-/* Imagenes del header */
 .header-img {
-    width: 80px;     /* mismo tamaño para ambas */
+    width: 80px;
     height: 80px;
-    object-fit: cover; /* asegura que la imagen no se deforme */
+    object-fit: cover;
 }
 
-/* Círculo para cecyt3 */
 .header-img.cecyt {
     border-radius: 50%;
 }
 
-/* H1 centrado */
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
     text-transform: uppercase;
     color: #BAD0D0;
     text-align: center;
 }
 
-/* Los párrafos del header */
 header p {
-    font-size: 1.25em;
-    margin: 10px 0;
+    font-size: 1em;
+    margin: 5px 0;
     color: #f0f0f0;
 }
 
@@ -62,33 +58,35 @@ header p {
 .container {
     position: relative;
     z-index: 2;
-    padding: 30px;
+    padding: 20px;
 }
 
 /* ======== SECCIÓN DE INFORMACIÓN ======== */
 .info {
     display: inline-block;
     background-color: #17261E;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
-    margin: 20px 0;
+    margin: 15px 0;
+    width: 90%;
+    max-width: 400px;
 }
 
 .info h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .info p {
-    font-size: 1.2em;
-    margin: 10px 0;
+    font-size: 1em;
+    margin: 5px 0;
 }
 
 /* ======== BOTONES ======== */
 .button {
-    display: inline-block; 
-    padding: 10px 20px;
-    font-size: 1.2em;
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 1em;
     background-color: #294025;
     color: #fff;
     text-decoration: none;
@@ -106,37 +104,85 @@ header p {
 .links {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    gap: 15px; 
-    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* ======== CONTENEDOR PARA NIEVE ======== */
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* ======== COPOS DE NIEVE ======== */
 .snowflake {
-    position: fixed;
+    position: absolute;
     top: -10px;
     width: 4px;
     height: 4px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     pointer-events: none;
-    z-index: 1;
     animation-name: fall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-/* Animación caída con leve movimiento lateral */
+/* Animación caída */
 @keyframes fall {
     0% {
         transform: translateY(0) translateX(0);
         opacity: 0.9;
     }
     50% {
-        transform: translateY(50vh) translateX(15px);
+        transform: translateY(50vh) translateX(10px);
     }
     100% {
-        transform: translateY(100vh) translateX(-15px);
+        transform: translateY(100vh) translateX(-10px);
         opacity: 0.9;
+    }
+}
+
+/* ======== MEDIA QUERIES ======== */
+@media (max-width: 768px) {
+    .header-content {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .info {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .info h2 {
+        font-size: 1.3em;
+    }
+
+    .info p {
+        font-size: 0.9em;
+    }
+
+    .button {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    .links {
+        gap: 8px;
     }
 }
