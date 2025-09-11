@@ -1,37 +1,74 @@
+/* ======== ESTILOS GENERALES ======== */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #1d5fa6; 
-    color: white;
+    color: #BAD0D0;
     text-align: center;
-}
-header {
-    background-color: #1d5fa6;
-    padding: 50px 0;
-    margin-bottom: 20px;
+
+    background-image: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
+/* ======== HEADER ======== */
+header {
+    position: relative;
+    z-index: 2;
+    background-color: #294025;
+    padding: 30px 20px;
+    margin-bottom: 10px;
+}
+
+/* Contenedor del header: imágenes + texto */
+.header-content {
+    display: flex;
+    align-items: center;       /* Centra verticalmente */
+    justify-content: center;   /* Centra horizontalmente */
+    gap: 300px;                 /* Espacio entre texto y fotos */
+}
+
+/* Imagenes del header */
+.header-img {
+    width: 80px;     /* mismo tamaño para ambas */
+    height: 80px;
+    object-fit: cover; /* asegura que la imagen no se deforme */
+}
+
+/* Círculo para cecyt3 */
+.header-img.cecyt {
+    border-radius: 50%;
+}
+
+/* H1 centrado */
 header h1 {
-    font-size: 3em;
+    margin: 0;
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    margin: 0;
+    color: #BAD0D0;
+    text-align: center;
 }
 
+/* Los párrafos del header */
 header p {
-    font-size: 1.5em;
+    font-size: 1.25em;
     margin: 10px 0;
     color: #f0f0f0;
 }
 
+/* ======== CONTENEDOR PRINCIPAL ======== */
 .container {
+    position: relative;
+    z-index: 2;
     padding: 30px;
 }
 
+/* ======== SECCIÓN DE INFORMACIÓN ======== */
 .info {
-    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    background-color: #17261E;
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
@@ -47,27 +84,59 @@ header p {
     margin: 10px 0;
 }
 
+/* ======== BOTONES ======== */
 .button {
-    display: inline-block; /* ocupa solo lo necesario */
+    display: inline-block; 
     padding: 10px 20px;
     font-size: 1.2em;
-    background-color: #0a3bdd;
+    background-color: #294025;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #000000;
+    color: #17261E;
+    background-color: #BAD9D0;
 }
 
-/* Contenedor de los links en columna */
+/* ======== LINKS EN COLUMNA ======== */
 .links {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centra los botones */
-    gap: 15px; /* espacio entre botones */
+    align-items: center; 
+    gap: 15px; 
     margin-top: 20px;
+}
+
+/* ======== COPOS DE NIEVE ======== */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Animación caída con leve movimiento lateral */
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(50vh) translateX(15px);
+    }
+    100% {
+        transform: translateY(100vh) translateX(-15px);
+        opacity: 0.9;
+    }
 }
