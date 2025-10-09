@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Creación de Portales Web - 5IM6</title>
-    <link rel="icon" type="image/png" href="img/icon.jpg"> 
+    <link rel="icon" type="image/png" href="img/icon.png"> 
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -49,22 +49,22 @@
                     Departamental 1
                 </summary>
                 <div class="links-grid">
-                    <a href="Bibliografia/bibiolgrafia.html" class="practice-link" target="_blank" title="Abrir Práctica 1 en una nueva pestaña">
+                    <a href="primerparcial/Bibliografia/bibiolgrafia.html" class="practice-link" target="_blank" title="Abrir Práctica 1 en una nueva pestaña">
                         <span>P1</span> - Bibliografía
                     </a>
-                    <a href="MotoresDeBusqueda/motoresbusqueda.html" class="practice-link" target="_blank" title="Abrir Práctica 2 en una nueva pestaña">
+                    <a href="primerparcial/MotoresDeBusqueda/motoresbusqueda.html" class="practice-link" target="_blank" title="Abrir Práctica 2 en una nueva pestaña">
                         <span>P2</span> - Motores de Búsqueda
                     </a>
-                    <a href="Hosting/hosting.html" class="practice-link" target="_blank" title="Abrir Práctica 3 en una nueva pestaña">
+                    <a href="primerparcial/Hosting/hosting.html" class="practice-link" target="_blank" title="Abrir Práctica 3 en una nueva pestaña">
                         <span>P3</span> - Hosting
                     </a>
-                    <a href="frames/segundoEjercio/framemain.html" class="practice-link" target="_blank" title="Abrir Práctica 4.1 en una nueva pestaña">
+                    <a href="primerparcial/frames/segundoEjercio/framemain.html" class="practice-link" target="_blank" title="Abrir Práctica 4.1 en una nueva pestaña">
                         <span>P4.1</span> - Frames (Ejemplo 1)
                     </a>
-                    <a href="frames/primerEjercicio/framesindex.html" class="practice-link" target="_blank" title="Abrir Práctica 4.2 en una nueva pestaña">
+                    <a href="primerparcial/frames/primerEjercicio/framesindex.html" class="practice-link" target="_blank" title="Abrir Práctica 4.2 en una nueva pestaña">
                         <span>P4.2</span> - Frames (Ejemplo 2)
                     </a>
-                    <a href="css/frames.html" class="practice-link" target="_blank" title="Abrir Práctica 5 en una nueva pestaña">
+                    <a href="primerparcial/css/frames.html" class="practice-link" target="_blank" title="Abrir Práctica 5 en una nueva pestaña">
                         <span>P5</span> - CSS
                     </a>
                 </div>
@@ -74,9 +74,9 @@
                 <summary class="departamental-header">
                     Departamental 2
                 </summary>
-                    <a href="segundoparcial/JavaScript/practica1.html" class="practice-link" target="_blank" title="Abrir Práctica 1 en una nueva pestaña">
-                        <span>P1</span> 1.- JavaScript
-                    </a>
+                <a href="segundoparcial/JavaScript/practica1.html" class="practice-link" target="_blank" title="Abrir Práctica 1 en una nueva pestaña">
+                    <span>P1</span> 1.- JavaScript
+                </a>
             </details>
 
             <details class="departamental-block">
@@ -95,7 +95,9 @@
         document.getElementById('welcome-btn').addEventListener('click', function() {
             const infoDiv = document.getElementById('personal-info');
             infoDiv.classList.toggle('hidden');
-            this.textContent = infoDiv.classList.contains('hidden') ? 'Ola profeeee 👋' : 'Cerrar info 👆';
+            // Nota: He cambiado el texto del botón de vuelta a algo más neutro tras el toggle, si quieres.
+            // this.textContent = infoDiv.classList.contains('hidden') ? '¡Hola, soy José Alejandro! 👋' : '¡Cerrar Información! 👆';
+            this.textContent = infoDiv.classList.contains('hidden') ? 'HOLA PROFEEEE KE ASE O KE👋' : '¡Cerrar Información! 👆';
         });
         
         // Función para cerrar otros acordeones al abrir uno (Opcional, pero mejora la UX)
@@ -114,5 +116,3 @@
     </script>
 </body>
 </html>
-
-
