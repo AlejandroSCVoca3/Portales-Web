@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTALES GUEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>TOP MEJORES CHAMBAS DE ESTEBANQUITO</h1>
+        <p>5 CSS Puros + 10 JavaScript Interactivos EJERCICIOS</p>
+    </div>
+
+    <div class="section-header">
+        <h2>🎨 Parte 1: Animaciones CSS Puras</h2>
+    </div>
+
+    <div class="exercise">
+        <h3>1. Fade In/Out (CSS)</h3>
+        <div class="demo-container">
+            <div class="fade-box"></div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> CSS @keyframes con propiedad opacity.
+            <br><strong>Código:</strong> animation: fadeIn 2s ease-in-out infinite alternate;
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>2. Rotación Continua (CSS)</h3>
+        <div class="demo-container">
+            <div class="rotate-box"></div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> transform: rotate() con animation linear infinite.
+            <br><strong>Código:</strong> animation: rotate 3s linear infinite;
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>3. Efecto Bounce (CSS)</h3>
+        <div class="demo-container">
+            <div class="bounce-ball"></div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> transform: translateY() con ease-in-out timing.
+            <br><strong>Código:</strong> animation: bounce 1.5s ease-in-out infinite;
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>4. Hover con Transformación (CSS)</h3>
+        <div class="demo-container">
+            <div class="scale-box" title="¡Pasa el mouse por encima!"></div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> :hover + transform: scale() y rotate().
+            <br><strong>Código:</strong> transition + :hover pseudo-clase.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>5. Loading Spinner (CSS)</h3>
+        <div class="demo-container">
+            <div class="spinner"></div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> Bordes parciales + rotación continua.
+            <br><strong>Código:</strong> border + transform: rotate(360deg).
+        </div>
+    </div>
+
+    <div class="section-header">
+        <h2>⚡ Parte 2: Animaciones con JavaScript</h2>
+    </div>
+
+    <div class="exercise">
+        <h3>6. Click Interactivo (JS)</h3>
+        <div class="demo-container">
+            <div class="js-click-box" id="clickBox">¡Toca aquí!</div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> addEventListener + classList.toggle().
+            <br><strong>Interacción:</strong> Click para cambiar estado.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>7. Animación de Contador (JS)</h3>
+        <div class="demo-container">
+            <div class="counter-container">
+                <div class="counter" id="counter">0</div>
+                <button class="btn" onclick="startCounter()">¡Dame el conteo!</button>
+                <button class="btn" onclick="resetCounter()">Borra todo 🗑️</button>
+            </div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> setInterval() + incremento gradual.
+            <br><strong>Aplicación:</strong> Contadores de estadísticas.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>8. Barra de Progreso Animada (JS)</h3>
+        <div class="demo-container">
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill">0%</div>
+                </div>
+                <div class="progress-controls">
+                    <button class="btn" onclick="animateProgress()">¡Dale candela! 🔥</button>
+                    <button class="btn" onclick="resetProgress()">Vuelve al inicio</button>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> Manipulación de width + textContent.
+            <br><strong>Aplicación:</strong> Barras de carga y progreso.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>9. Slider de Imágenes (JS)</h3>
+        <div class="demo-container">
+            <div class="slider-container-js">
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <div class="slide" style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4);">HOLA PROFE</div>
+                    <div class="slide" style="background: linear-gradient(45deg, #a8edea, #fed6e3);">KE ASE O KE</div>
+                    <div class="slide" style="background: linear-gradient(45deg, #ffeaa7, #fab1a0);">VAMOS POR UNAS PEKEÑAS</div>
+                </div>
+                <div class="slider-controls">
+                    <button class="btn" onclick="previousSlide()">BIFOR</button>
+                    <button class="btn" onclick="nextSlide()">AFTER</button>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> transform: translateX() + control de índices.
+            <br><strong>Aplicación:</strong> Carruseles y galerías.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>10. Partículas Dinámicas (JS)</h3>
+        <div class="demo-container">
+            <div class="particles-dynamic" id="particlesContainer">
+                <button class="btn" onclick="createParticleBurst()">ARRIBA LOS 4LOKOS </button>
+            </div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> createElement() + posicionamiento random.
+            <br><strong>Aplicación:</strong> Efectos visuales y celebraciones.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>11. Parallax Scroll (JS)</h3>
+        <div class="demo-container">
+            <div class="parallax-container">
+                <div class="parallax-layer" id="parallaxBg">Fondo (Tranqui)</div>
+                <div class="parallax-layer" id="parallaxMid">Medio (Un poco rápido)</div>
+                <div class="parallax-layer" id="parallaxFg">Frente (¡Corre!)</div>
+            </div>
+            <p>Desplázate para ver el efecto parallax</p>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> addEventListener('scroll') + cálculos de velocidad.
+            <br><strong>Aplicación:</strong> Sitios web inmersivos.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>12. Typing Effect (JS)</h3>
+        <div class="demo-container">
+            <div class="typing-container">
+                <div class="typing-text" id="typingText"></div>
+                <button class="btn" onclick="startTyping()">DALE KANDELA MAMI SI✍️</button>
+            </div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> setTimeout() + manipulación de caracteres.
+            <br><strong>Aplicación:</strong> Efectos de máquina de escribir.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>13. Physics Ball (JS)</h3>
+        <div class="demo-container">
+            <canvas id="physicsCanvas" width="400" height="200"></canvas>
+            <div class="canvas-controls">
+                <button class="btn" onclick="addBall()">AGREGAR UNA BALL</button>
+                <button class="btn" onclick="clearCanvas()">WASH THAT MAMADA</button>
+            </div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> Canvas API + requestAnimationFrame() + física básica.
+            <br><strong>Aplicación:</strong> Juegos y simulaciones.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>14. Morphing Text (JS)</h3>
+        <div class="demo-container">
+            <div class="morphing-text" id="morphingText">OLA KE ASE</div>
+            <button class="btn" onclick="morphText()">CHANGE THE TITULO</button>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> Manipulación de texto con CSS Transition.
+            <br><strong>Aplicación:</strong> Transiciones de contenido dinámico.
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>15. Sistema de Partículas Avanzado (JS)</h3>
+        <div class="demo-container">
+            <canvas id="particleCanvas" width="400" height="200"></canvas>
+            <div class="canvas-controls">
+                <button class="btn" onclick="toggleParticleSystem()">ON/OFF 🕹️</button>
+                <button class="btn" onclick="changeParticleColor()">CAMBIAR EL COLOR </button>
+            </div>
+        </div>
+        <div class="description">
+            <strong>Técnica:</strong> Canvas + Arrays de objetos + matemáticas avanzadas.
+            <br><strong>Aplicación:</strong> Efectos atmosféricos profesionales.
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>💡 <strong>Tip:</strong> Abre las herramientas de desarrollador para ver el código JavaScript en acción</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
