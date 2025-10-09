@@ -1,188 +1,296 @@
-/* ======== ESTILOS GENERALES ======== */
+/* Paleta de Colores Sugerida:
+   --primary-dark: #1A341D;   (Verde oscuro IPN)
+   --secondary-dark: #2F4D33; (Verde intermedio)
+   --text-light: #E0E7E0;     (Blanco roto)
+   --accent-light: #A4BCA9;   (Verde claro para hover)
+*/
+
+/* (Mantengo los estilos generales, header, info-card, etc., de la versión anterior) */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
     margin: 0;
     padding: 0;
-    color: #BAD0D0;
+    color: var(--text-light);
     text-align: center;
-
+    min-height: 100vh;
+    background-color: #1A341D;
     background-image: url("img/fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    line-height: 1.6;
 }
 
-/* ======== HEADER ======== */
-header {
+:root {
+    --primary-dark: #1A341D;
+    --secondary-dark: #2F4D33;
+    --text-light: #E0E7E0;
+    --accent-light: #A4BCA9;
+}
+
+/* ======== HEADER (Sin cambios mayores) ======== */
+.main-header {
     position: relative;
     z-index: 2;
-    background-color: #294025;
-    padding: 20px 10px;
-    margin-bottom: 10px;
+    background-color: rgba(26, 52, 29, 0.95);
+    padding: 25px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* Para móvil */
-    gap: 20px;       /* Más flexible */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
 .header-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
+.logo-cecyt { border-radius: 50%; }
 
-.header-img.cecyt {
-    border-radius: 50%;
-}
+.title-group { flex-grow: 1; }
 
-header h1 {
+.main-header h1 {
     margin: 0;
-    font-size: 1.8em;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #BAD0D0;
-    text-align: center;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-header p {
-    font-size: 1em;
-    margin: 5px 0;
-    color: #f0f0f0;
+.main-header h2 {
+    margin: 5px 0 0;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: var(--accent-light);
 }
 
-/* ======== CONTENEDOR PRINCIPAL ======== */
+.school-info p {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+    color: #c4cdc4;
+}
+
+/* ======== CONTENEDOR PRINCIPAL Y SECCIONES ======== */
 .container {
     position: relative;
     z-index: 2;
-    padding: 20px;
-}
-
-/* ======== SECCIÓN DE INFORMACIÓN ======== */
-.info {
-    display: inline-block;
-    background-color: #17261E;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 15px 0;
-    width: 90%;
-    max-width: 400px;
-}
-
-.info h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.info p {
-    font-size: 1em;
-    margin: 5px 0;
-}
-
-/* ======== BOTONES ======== */
-.button {
-    display: inline-block;
-    padding: 8px 15px;
-    font-size: 1em;
-    background-color: #294025;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.button:hover {
-    color: #17261E;
-    background-color: #BAD9D0;
-}
-
-/* ======== LINKS EN COLUMNA ======== */
-.links {
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* ======== CONTENEDOR PARA NIEVE ======== */
+/* Tarjeta de Información Personal (Sin cambios mayores) */
+.info-card {
+    background-color: rgba(23, 38, 30, 0.85);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover { transform: translateY(-3px); }
+
+.personal-info {
+    text-align: left;
+    margin-top: 15px;
+    border-top: 1px dashed var(--secondary-dark);
+    padding-top: 15px;
+}
+
+.personal-info.hidden { display: none; }
+
+.personal-info h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    color: var(--accent-light);
+}
+
+.personal-info p { margin: 8px 0; font-size: 0.95em; }
+
+/* Botón de Bienvenida (Sin cambios mayores) */
+.welcome-button {
+    background-color: var(--accent-light);
+    color: var(--primary-dark);
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: pulse 1.5s infinite;
+}
+
+.welcome-button:hover {
+    background-color: #c3d9c9;
+    transform: scale(1.02);
+    animation: none;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ======== ESTILOS DE ACORDEÓN DE PRÁCTICAS ======== */
+.practices-accordion {
+    width: 100%;
+    max-width: 900px;
+}
+
+.practices-accordion h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--accent-light);
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 5px;
+}
+
+.departamental-block {
+    background-color: rgba(47, 77, 51, 0.8); /* Fondo del bloque */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Para contener los bordes redondeados */
+}
+
+/* Estilo del encabezado del acordeón */
+.departamental-header {
+    display: block;
+    padding: 15px 20px;
+    background-color: var(--secondary-dark);
+    color: var(--text-light);
+    font-size: 1.3em;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+    text-align: left;
+    position: relative;
+    list-style: none; /* Oculta el marcador de flecha por defecto */
+}
+
+/* Flecha de indicador de expandir/colapsar */
+.departamental-header::before {
+    content: '▶'; /* Triángulo para indicar expansión */
+    font-size: 0.8em;
+    margin-right: 15px;
+    transition: transform 0.3s;
+    display: inline-block;
+    color: var(--accent-light);
+}
+
+/* Rotar la flecha cuando está abierto */
+.departamental-block[open] > .departamental-header::before {
+    transform: rotate(90deg);
+}
+
+.departamental-header:hover {
+    background-color: #3b6040;
+}
+
+/* Contenido (Enlaces) */
+.departamental-block > .links-grid {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.empty-message {
+    padding: 20px;
+    font-style: italic;
+    color: var(--accent-light);
+}
+
+/* Grid de Enlaces a Prácticas (Mantenido y adaptado) */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.practice-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 400;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    min-height: 60px;
+    text-align: center;
+}
+
+.practice-link span {
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 3px;
+    color: var(--accent-light);
+}
+
+.practice-link:hover {
+    background-color: #0d1e11;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* Estilos de Nieve y Media Queries (Mantenidos de la versión anterior) */
+
 #snow-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 0;
 }
 
-/* ======== COPOS DE NIEVE ======== */
 .snowflake {
-    position: absolute;
-    top: -10px;
-    width: 4px;
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    pointer-events: none;
-    animation-name: fall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    position: absolute; top: -10px; width: 4px; height: 4px;
+    background-color: rgba(255, 255, 255, 0.7); border-radius: 50%;
+    pointer-events: none; animation-name: fall; animation-timing-function: linear; animation-iteration-count: infinite;
 }
 
-/* Animación caída */
 @keyframes fall {
-    0% {
-        transform: translateY(0) translateX(0);
-        opacity: 0.9;
-    }
-    50% {
-        transform: translateY(50vh) translateX(10px);
-    }
-    100% {
-        transform: translateY(100vh) translateX(-10px);
-        opacity: 0.9;
-    }
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(50vh) translateX(5vw); }
+    100% { transform: translateY(100vh) translateX(-5vw); }
 }
 
-/* ======== MEDIA QUERIES ======== */
-@media (max-width: 768px) {
-    .header-content {
-        gap: 10px;
-        flex-direction: column;
-    }
-
-    header h1 {
-        font-size: 1.4em;
-    }
-
-    header p {
-        font-size: 0.9em;
-    }
-
-    .info {
-        width: 95%;
-        padding: 10px;
-    }
-
-    .info h2 {
-        font-size: 1.3em;
-    }
-
-    .info p {
-        font-size: 0.9em;
-    }
-
-    .button {
-        font-size: 0.9em;
-        padding: 6px 12px;
-    }
-
-    .links {
-        gap: 8px;
-    }
+@media (max-width: 900px) {
+    .links-grid { grid-template-columns: 1fr 1fr; }
 }
+
+@media (max-width: 600px) {
+    .header-content { flex-direction: column; text-align: center; }
+    .header-img { width: 70px; height: 70px; }
+    .title-group { order: -1; }
+    .main-header h1 { font-size: 1.6em; }
+    .main-header h2 { font-size: 1.1em; }
+    .school-info p { font-size: 0.85em; }
+    .links-grid { grid-template-columns: 1fr; }
+    .practice-link { font-size: 0.95em; padding: 10px; }
+    .info-card { padding: 15px; }
+    .departamental-header { font-size: 1.1em; }
+}   
