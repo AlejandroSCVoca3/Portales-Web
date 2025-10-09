@@ -3,67 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portada-5IM6-SCJA</title>
+    <title>Portafolio - Creación de Portales Web - 5IM6</title>
+    <link rel="icon" type="image/png" href="img/icon.png"> 
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/jpeg" href="img/icon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <!-- Contenedor para copos de nieve -->
-    <div id="snow-container"></div>
+    <div id="snow-container" aria-hidden="true"></div>
 
-    <!-- Header -->
-    <header>
+    <header class="main-header">
         <div class="header-content">
-            <img src="img/ipn.png" alt="ipn" class="header-img">
-            <h1>Creación de Portales Web</h1>
-            <img src="img/cecyt3.png" alt="cecyt3" class="header-img cecyt">
+            <img src="img/ipn.png" alt="Logotipo del IPN" class="header-img logo-ipn">
+            
+            <div class="title-group">
+                <h1>Portafolio de Evidencias</h1>
+                <h2>Creación de Portales Web</h2>
+            </div>
+            
+            <img src="img/cecyt3.png" alt="Logotipo del CECyT 3" class="header-img logo-cecyt">
         </div>
-        <p>Centro de Estudios Científicos y Tecnológicos No. 3</p>
-        <p>"Estanislao Ramírez Ruiz"</p>
+        <div class="school-info">
+            <p>Centro de Estudios Científicos y Tecnológicos No. 3 "Estanislao Ramírez Ruiz"</p>
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="info">
-            <h2>Bienvenidoooooo :D</h2>
-            <p><strong>Nombre:</strong><br>
-            José Alejandro Sánchez Consuelo</p><br>
-            <p><strong>Grupo:</strong> 5IM6</p>
-            <p><strong>Materia:</strong> Portales Web</p>
-            <p><strong>Carrera:</strong> Computación</p>
-            <p><strong>Horario:</strong> Matutino</p>
-        </div>
-        
-        <h3>Prácticas:</h3>
-        <div class="links">
-            <a href="Bibliografia/bibiolgrafia.html" class="button" target="_blank">
-                Práctica 1 - Bibliografía
-            </a>
-            <a href="MotoresDeBusqueda/motoresbusqueda.html" class="button" target="_blank">
-                Práctica 2 - Motores de Búsqueda
-            </a>
-            <a href="Hosting/hosting.html" class="button" target="_blank">
-                Práctica 3 - Hosting
-            </a>
-            <a href="frames/segundoEjercio/framemain.html" class="button" target="_blank">
-                Práctica 4.1 - Frames Primer Ejemplo
-            </a>
-            <a href="frames/primerEjercicio/framesindex.html" class="button" target="_blank">
-                Práctica 4.2 - Frames Segundo Ejemplo
-            </a>
-            <a href="css/frames.html" class="button" target="_blank">
-                Práctica 5 - CSS
-            </a>
-        </div>
-    </div>
+    <main class="container">
+        <section class="info-card">
+            <button id="welcome-btn" class="welcome-button">HOLA PROFEEEE KE ASE O KE👋</button>
+            <div id="personal-info" class="personal-info hidden">
+                <h3>Datos del Alumno</h3>
+                <p><strong>Nombre:</strong> José Alejandro Sánchez Consuelo</p>
+                <p><strong>Grupo:</strong> 5IM6</p>
+                <p><strong>Materia:</strong> Portales Web</p>
+                <p><strong>Carrera:</strong> Técnico en Computación</p>
+                <p><strong>Horario:</strong> Matutino</p>
+            </div>
+        </section>
+
+        <section class="practices-accordion">
+            <h3>📂 Prácticas </h3>
+            
+            <details class="departamental-block" open>
+                <summary class="departamental-header">
+                    Departamental 1
+                </summary>
+                <div class="links-grid">
+                    <a href="Bibliografia/bibiolgrafia.html" class="practice-link" target="_blank" title="Abrir Práctica 1 en una nueva pestaña">
+                        <span>P1</span> - Bibliografía
+                    </a>
+                    <a href="MotoresDeBusqueda/motoresbusqueda.html" class="practice-link" target="_blank" title="Abrir Práctica 2 en una nueva pestaña">
+                        <span>P2</span> - Motores de Búsqueda
+                    </a>
+                    <a href="Hosting/hosting.html" class="practice-link" target="_blank" title="Abrir Práctica 3 en una nueva pestaña">
+                        <span>P3</span> - Hosting
+                    </a>
+                    <a href="frames/segundoEjercio/framemain.html" class="practice-link" target="_blank" title="Abrir Práctica 4.1 en una nueva pestaña">
+                        <span>P4.1</span> - Frames (Ejemplo 1)
+                    </a>
+                    <a href="frames/primerEjercicio/framesindex.html" class="practice-link" target="_blank" title="Abrir Práctica 4.2 en una nueva pestaña">
+                        <span>P4.2</span> - Frames (Ejemplo 2)
+                    </a>
+                    <a href="css/frames.html" class="practice-link" target="_blank" title="Abrir Práctica 5 en una nueva pestaña">
+                        <span>P5</span> - CSS
+                    </a>
+                </div>
+            </details>
+
+            <details class="departamental-block">
+                <summary class="departamental-header">
+                    Departamental 2
+                </summary>
+                    <a href="segundoparcial/JavaScript/practica1.html" class="practice-link" target="_blank" title="Abrir Práctica 1 en una nueva pestaña">
+                        <span>P1</span> 1.- JavaScript
+                    </a>
+            </details>
+
+            <details class="departamental-block">
+                <summary class="departamental-header">
+                    Departamental 3
+                </summary>
+                <p class="empty-message">¡Prácticas de la Tercera Departamental en camino!</p>
+            </details>
+
+        </section>
+    </main>
     
     <script src="snow.js"></script>
+    <script>
+        // JS para mostrar/ocultar la información personal (Mantenido)
+        document.getElementById('welcome-btn').addEventListener('click', function() {
+            const infoDiv = document.getElementById('personal-info');
+            infoDiv.classList.toggle('hidden');
+            this.textContent = infoDiv.classList.contains('hidden') ? '¡Hola, soy José Alejandro! 👋' : '¡Cerrar Información! 👆';
+        });
+        
+        // Función para cerrar otros acordeones al abrir uno (Opcional, pero mejora la UX)
+        const detailsElements = document.querySelectorAll('.departamental-block');
+        detailsElements.forEach((targetDetail) => {
+            targetDetail.addEventListener('toggle', () => {
+                if (targetDetail.open) {
+                    detailsElements.forEach((detail) => {
+                        if (detail !== targetDetail && detail.open) {
+                            detail.open = false;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
