@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-accent: #00c6ff;
+  --color-accent2: #0072ff;
+  --color-text: #e6edf3;
+  --color-muted: #8b949e;
+  --radius: 14px;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  background: linear-gradient(90deg, var(--color-accent2), var(--color-accent));
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 1px;
+}
+
+header h2 {
+  font-weight: 300;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.fase {
+  background: var(--color-surface);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transform: translateY(60px);
+  opacity: 0;
+  transition: transform 0.8s var(--transition), opacity 0.8s var(--transition);
+}
+
+.fase.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.fase h2 {
+  font-size: 1.8rem;
+  color: var(--color-accent);
+  margin-bottom: 0.6rem;
+}
+
+.fase h3, .fase h4 {
+  color: var(--color-accent2);
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  font-weight: 300;
+}
+
+ul {
+  margin: 1rem 0 1.5rem 1.5rem;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 0.7rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+em {
+  color: var(--color-accent);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.fase:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transform: scale(1.01);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent2);
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  main {
+    padding: 1rem;
+  }
+  .fase {
+    padding: 1.5rem;
+  }
+}
